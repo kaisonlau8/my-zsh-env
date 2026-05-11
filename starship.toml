@@ -1,0 +1,59 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$conda\
+$nodejs\
+$deno\
+$golang\
+$cmd_duration\
+$line_break\
+$character"""
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+style = "bold cyan"
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "bold red"
+format = '([$all_status$ahead_behind]($style) )'
+
+[python]
+symbol = " "
+style = "yellow"
+format = '[$symbol$version]($style) '
+
+[conda]
+symbol = " "
+style = "bold green"
+format = '[$symbol$environment]($style) '
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = '[$symbol$version]($style) '
+
+[deno]
+symbol = "🦕 "
+style = "bold green"
+format = '[$symbol$version]($style) '
+
+[golang]
+symbol = " "
+style = "bold cyan"
+format = '[$symbol$version]($style) '
+
+[cmd_duration]
+min_time = 2_000
+format = "[$duration]($style) "
+style = "bold yellow"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
